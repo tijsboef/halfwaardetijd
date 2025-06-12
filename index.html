@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Halfwaardetijd Helper 4.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- De game container is nu altijd zichtbaar, de modals regelen de flow -->
+    <div id="game-container">
+        <header>
+            <div id="score-display">Score: 0</div>
+            <h1>De Halfwaardetijd Helper</h1>
+            <p id="isotope-info">Onderzoek het isotoop en ontdek de leeftijd!</p>
+        </header>
+
+        <main id="main-content">
+            <div class="canvas-wrapper">
+                <h2 id="artifact-title">Simulatie</h2>
+                <canvas id="atom-canvas" width="400" height="400"></canvas>
+            </div>
+            <div class="canvas-wrapper">
+                <h2>Vervalkromme</h2>
+                <canvas id="graph-canvas" width="400" height="400"></canvas>
+            </div>
+        </main>
+
+        <div id="controls-container">
+            <!-- De knop heeft nu weer een start/pauze functie -->
+            <button id="action-button">Start Volgend Level</button>
+        </div>
+
+        <div id="feedback-container">
+             <div class="nova-avatar"></div>
+            <div class="speech-bubble">
+                <p id="feedback-text">Welkom terug, jonge wetenschapper!</p>
+            </div>
+        </div>
+        
+        <div id="museum-container">
+            <h2>Mijn Museum</h2>
+            <div id="museum-gallery"></div>
+        </div>
+    </div>
+
+    <!-- Modal voor Start, Vragen en Einde -->
+    <div id="modal-backdrop" class="hidden">
+        <div id="modal-content">
+            <h3 id="modal-title"></h3>
+            <p id="modal-text"></p>
+            <div id="modal-extra-content"></div>
+            <button id="modal-button"></button>
+        </div>
+    </div>
+
+</body>
+</html>
